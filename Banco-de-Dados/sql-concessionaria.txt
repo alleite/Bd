@@ -1,0 +1,17 @@
+create database concessionaria
+create table Veiculo (
+chassi VARCHAR (17) NOT NULL primary key,
+marca VARCHAR (10) NOT NULL,
+modelo VARCHAR(20) NOT NULL,
+anoDeFabricação INTEGER(4) NOT NULL,
+anoDeModelo INTEGER(4) NOT NULL,
+combustivel VARCHAR(1) NOT NULL )
+
+alter table veiculo add valor DECIMAL NOT NULL;
+alter table veiculo add motor VARCHAR (20) NOT NULL
+
+alter table veiculo drop motor;
+
+drop table veiculo;
+
+drop database concessionaria;
