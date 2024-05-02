@@ -43,3 +43,14 @@ Select idFuncionario, cidade from funcionario where cidade = 'Valinhos' or cidad
 Select idFuncionario, cargos, salário from funcionario where cidade <> 'São Paulo' and salário >= 1000;
 Select nome from funcionario where cargos is null;
 Select nome , salário from funcionario where salário between 500 and 1500;
+Select nome, email from funcionario where email like '%@hotmail%';
+Select nome, email from funcionario where email like '%.br';
+Select nome, email from funcionario where email not like '%.com%';
+Select nome, email from funcionario where nome like '__r%';
+
+Select nome, day(dataNascto), month(dataNascto), year(dataNascto) from funcionario;
+Select distinct monthname(dataNascto) from funcionario;
+Select idFuncionario, nome, year(dataNascto) from funcionario where dataNascto like '%1987%';
+Select nome, day(dataNascto) from funcionario where dataNascto like '%1988-04%';
+Select nome, datediff (curdate(), dataNascto)*365 from funcionario;
+Select idFuncionario, nome, year(dataNascto) from funcionario where dataNascto like '%1990-03%' and '%1990-05%';
