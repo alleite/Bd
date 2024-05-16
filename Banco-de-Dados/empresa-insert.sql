@@ -54,3 +54,11 @@ Select idFuncionario, nome, year(dataNascto) from funcionario where dataNascto l
 Select nome, day(dataNascto) from funcionario where dataNascto like '%1988-04%';
 Select nome, datediff (curdate(), dataNascto)*365 from funcionario;
 Select idFuncionario, nome, year(dataNascto) from funcionario where dataNascto like '%1990-03%' and '%1990-05%';
+Select nome, year(dataNascto) from funcionario where estado like '%SP%';
+Select nome, dataNascto from funcionario where year(dataNascto) < 1990;
+Select distinct cidade, estado from funcionario where year(dataNascto) > 1989;
+Select * from funcionario where year(dataNascto) between 1988 and 1990; 
+Select nome from funcionario where day(dataNascto) like '%30%';
+Select nome, salário + PI() from funcionario;
+Select sqrt(day(dataNascto)) from funcionario where cidade like 'Valinhos';
+
