@@ -59,6 +59,19 @@ Select nome, dataNascto from funcionario where year(dataNascto) < 1990;
 Select distinct cidade, estado from funcionario where year(dataNascto) > 1989;
 Select * from funcionario where year(dataNascto) between 1988 and 1990; 
 Select nome from funcionario where day(dataNascto) like '%30%';
+
+
 Select nome, salário + PI() from funcionario;
 Select sqrt(day(dataNascto)) from funcionario where cidade like 'Valinhos';
+Select log(month(dataNascto)) from funcionario where year(dataNascto) = 1990;
+Select nome, day(dataNascto) from funcionario where power(day(dataNascto),3) >= 1000;
+Select salário from funcionario where round(salário * 1.115) > 1000;
+Select abs(1500 - salário) from funcionario;
+Select idFuncionario, sqrt(idFuncionario) from funcionario where year(dataNascto) < 1989 and month(dataNascto) < 4;
+Select nome, round(salário * 0.35, 1) from funcionario;
+Select log(idFuncionario) from funcionario;
+Select sqrt(idFuncionario) from funcionario;
+Select power(idFuncionario,2) from funcionario;
+Select abs(idFuncionario - 10) from funcionario order by abs(idFuncionario - 10) desc;
 
+Select upper(nome) from funcionario;
