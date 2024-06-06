@@ -75,3 +75,8 @@ Select power(idFuncionario,2) from funcionario;
 Select abs(idFuncionario - 10) from funcionario order by abs(idFuncionario - 10) desc;
 
 Select upper(nome) from funcionario;
+Select distinct length(month(dataNascto)), monthname(dataNascto) from funcionario;
+Select replace(nome,' ','-') from funcionario;
+Select left(nome,3), right(nome,3) from funcionario;
+Select Sqrt(Length(nome)) from funcionario;
+Select distinct substring(cidade, 3,5) from funcionario;
