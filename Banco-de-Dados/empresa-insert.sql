@@ -48,6 +48,7 @@ Select nome, email from funcionario where email like '%.br';
 Select nome, email from funcionario where email not like '%.com%';
 Select nome, email from funcionario where nome like '__r%';
 
+'Aula 4'
 Select nome, day(dataNascto), month(dataNascto), year(dataNascto) from funcionario;
 Select distinct monthname(dataNascto) from funcionario;
 Select idFuncionario, nome, year(dataNascto) from funcionario where dataNascto like '%1987%';
@@ -60,7 +61,7 @@ Select distinct cidade, estado from funcionario where year(dataNascto) > 1989;
 Select * from funcionario where year(dataNascto) between 1988 and 1990; 
 Select nome from funcionario where day(dataNascto) like '%30%';
 
-
+'Aula 5'
 Select nome, salário + PI() from funcionario;
 Select sqrt(day(dataNascto)) from funcionario where cidade like 'Valinhos';
 Select log(month(dataNascto)) from funcionario where year(dataNascto) = 1990;
@@ -74,9 +75,20 @@ Select sqrt(idFuncionario) from funcionario;
 Select power(idFuncionario,2) from funcionario;
 Select abs(idFuncionario - 10) from funcionario order by abs(idFuncionario - 10) desc;
 
+'Aula 6'
 Select upper(nome) from funcionario;
 Select distinct length(month(dataNascto)), monthname(dataNascto) from funcionario;
 Select replace(nome,' ','-') from funcionario;
 Select left(nome,3), right(nome,3) from funcionario;
 Select Sqrt(Length(nome)) from funcionario;
 Select distinct substring(cidade, 3,5) from funcionario;
+Select replace(nome,' ', '') from funcionario;
+Select ascii(idFuncionario) from funcionario where cidade like 'Campinas';
+Select ascii(nome) from funcionario where day(dataNascto) > 20;
+Select rtrim(substring(cidade,1,4)) from funcionario;
+Select ltrim(right(cidade,6)) from funcionario;
+Select distinct lower(cidade) from funcionario;
+
+'Aula 7'
+select max(salário), min(salário) from funcionario where estado like'%SP%';
+select sum(salário) as soma from funcionario where nome like '%Cunha%';
