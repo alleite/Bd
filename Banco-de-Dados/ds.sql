@@ -1,7 +1,10 @@
-create database crud_csharp;
-create table colaborador(
-codigo_colaborador int(11) primary key not null,
-nome_colaborador varchar(50) not null, 
-sobrenome_colaborador varchar(50) not null,
-cpf_colaborador varchar(50) not null
-)
+
+CREATE TABLE cliente (
+nome VARCHAR(100) NOT NULL,
+telefone INT(11) NOT NULL, 
+RG INT(11) PRIMARY KEY NOT NULL,
+codigoCliente INT not NULL,
+nomeFilme VARCHAR(100) NOT NULL, 
+codigoFilme INT NOT NULL, 
+dataRetirada INT(8) NOT NULL,
+dataDevolucao INT(8) NOT NULL)
