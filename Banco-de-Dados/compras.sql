@@ -49,8 +49,60 @@ Insert into compra values
 (1,'1', '1', '2010-12-01', '2', '1.50'),
 (2, '2', '1', '2010-12-03','5', '1.50'),
 (3, '1' ,'3' ,'2011-01-05','13','1.75'),
-(4, '1', '4', '2011-01-11' '1', '5.20'),
+(4, '1', '4', '2011-01-11', '1', '5.20'),
 (5, '3' ,'2' ,'2011-03-16' ,'7' ,'1.00'),
 (6, '4' ,'5', '2011-05-21' ,'10' ,'0.75'),
 (7, '2' ,'6', '2011-06-07', '2' ,'10.50'),
-(8, '5', '3', '2011-06-07' , '2' ,'1.75')
+(8, '5', '3', '2011-06-07' , '2' ,'1.75');
+
+/* 8) */
+UPDATE cliente SET estado = 'SP';
+
+/* 9) */
+SELECT nome, estado FROM cliente;
+
+/* 10) */
+UPDATE cliente SET sexo = "M" WHERE nome = 'Jose de Oliveira';
+
+/* 11) */
+SELECT descricao FROM produto;
+
+/* 12) */
+DELETE FROM produto WHERE descricao = 'Papel Sulfite';
+
+/* 13) */
+UPDATE produto SET qtde = '15' WHERE descricao = 'Lápis';
+
+/* 14) */
+SELECT UPPER(descricao) FROM produto WHERE idProduto = '1' OR idProduto = '2';
+
+/* 15) */
+SELECT SUM(valor) FROM compra WHERE idProduto = 1;
+
+/* 16) */
+SELECT AVG(valor) FROM compra WHERE idCliente = 1;
+
+/* 17) */
+SELECT nome FROM cliente WHERE cidade = 'Jundiai';
+
+/* 18) */
+SELECT idCliente, UPPER(nome) FROM cliente WHERE nome LIKE '%Carlos%';
+
+/* 19) */
+SELECT descricao, preco,  qtde FROM produto WHERE preco > 1.00 AND qtde < 10;
+
+/* 20) */
+SELECT *  FROM cliente GROUP BY nome ;
+
+/* 21) */
+SELECT cidade, COUNT(*) AS quantidade_clientes FROM cliente GROUP BY cidade ORDER BY quantidade_clientes DESC;
+
+/* 22) */
+SELECT SUM(preco) AS soma_precos, AVG(preco) AS media_precos FROM produto;
+
+/* 23) */
+SELECT max(preco), MIN(preco) FROM produto;
+
+/* 24) */
+SELECT SUM(valor) AS valor_2010 FROM compra WHERE dataCompra LIKE '%2010%';
+
